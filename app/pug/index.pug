@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        meta(http-equiv="X-UA-Compatible", content="ie=edge")
+        link(rel="stylesheet", href="./css/main.css")
+        title Document
+    body
+        include header.pug
+        main
+            section.main#main
+                .container
+                    .main-wrap
+                        .main-hero
+                            nav
+                                a.nav__link.scroll(href="#main") Главная
+                                a.nav__link.scroll(href="#adventage") Преимущества
+                                a.nav__link.scroll(href="#cost")  Стоимость
+                                a.nav__link.scroll(href="#reviews") Отзывы
+                            .main-info
+                                p.main-info__title
+                                    span Lorem ipsum
+                                    |  dolor sit amet, consecte&shy;tur adipiscing
+                                p.main-info__subtitle Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eius&shy;mod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum  
+                        .main-block
+                            form.form(action="")
+                                .form__label
+                                    label Ваше имя
+                                        input(type="text",placeholder='Имя',required)
+                                .form__label
+                                    label Телефон
+                                        input(type="tel",placeholder='Телефон',required)
+                                .form__label
+                                    label Ваши номера
+                                        input(type="tel",placeholder='Ваши номера',required)
+                                input.submit-btn(type="submit", value="Заказать") 
+                            .form__mesage
+            section.adventage#adventage
+                .container
+                    h2.section-title Преимущества
+                    .adventage-wrap
+                        figure.adventage-figure
+                            img(src="./img/car.jpg", alt="card_img",)
+                        .adventage-block
+                            .adventage-block__card
+                                .adventage-block__card__image
+                                    img(src="./img/card.png", alt="card_img",)
+                                .adventage-block__card-wrap
+                                    h5.adventage-block__card__title Lorem Ipsum
+                                    p.adventage-block__card__text Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis  
+                            .adventage-block__card
+                                .adventage-block__card__image
+                                    img(src="./img/card2.png", alt="card_img",)
+                                .adventage-block__card-wrap
+                                    h5.adventage-block__card__title Lorem Ipsum
+                                    p.adventage-block__card__text Lorem ipsum dolor sit amet, consectetur adipis
+                            .adventage-block__card
+                                .adventage-block__card__image
+                                    img(src="./img/card3.png", alt="card_img",)
+                                .adventage-block__card-wrap
+                                    h5.adventage-block__card__title Lorem Ipsum
+                                    p.adventage-block__card__text Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut  
+            section.cost#cost
+                .container  
+                    h2.section-title Стоимость
+                    .cost-wrap
+                        .cost-card
+                            h3.cost-card__title Lorem Ipsum
+                            ul.cost-card-list
+                                li.cost-card-list__item Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eusmod tempor
+                                li.cost-card-list__item Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eusmod tempor
+                                li.cost-card-list__item Lorem ipsum dolor sit amet, consectetur 
+                            span.cost-card__old-price 399 грн
+                            span.cost-card__price 299 
+                                span грн
+                            a.submit-btn.submit-btn--shadow.btn-pop-up(href="#") заказать
+                        .cost-card
+                            h3.cost-card__title Lorem Ipsum
+                            ul.cost-card-list
+                                li.cost-card-list__item Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eusmod tempor
+                                li.cost-card-list__item Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eusmod tempor
+                                li.cost-card-list__item Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eusmod tempor
+                            span.cost-card__old-price 599 грн
+                            span.cost-card__price 499 
+                                span грн
+                            a.submit-btn.submit-btn--shadow.btn-pop-up(href="#") заказать
+                    p.cost-info  Lorem ipsum dolor sit amet, 
+            section.reviews#reviews
+                .container
+                    h2.section-title Отзывы
+                    .slider
+                        .slider__wrapper
+                            .slider__item
+                                img(src="./img/viber.jpg", alt="", srcset="")
+                            .slider__item
+                                img(src="./img/viber.jpg", alt="", srcset="")
+                            .slider__item
+                                img(src="./img/viber.jpg", alt="", srcset="")
+                            .slider__item
+                                img(src="./img/viber.jpg", alt="", srcset="")
+                        a(href="#", role="button").slider__control.slider__control_left
+                        a(href="#", role="button").slider__control.slider__control_right.slider__control_show
+            .pop-up
+                .pop-up-wrapper
+                    .pop-up-container
+                        form.pop-up-form#my-form(action="https://formspree.io/mgenyybo",method="POST")
+                            .pop-up-form-header
+                                h3.pop-up-form__title Заявка
+                                button.pop-up-form__close(href="#")
+                            .pop-up-form__label
+                                input(type="text",placeholder='Имя',required,name="name")
+                            .pop-up-form__label
+                                input(type="tel",placeholder='Телефон',required,name="phone")
+                            .pop-up-form__label
+                                input(type="tel",placeholder='Ваши номера',required,name="phones")
+                            input.submit-btn#my-form-button(type="submit", value="Заказать") 
+                            p#my-form-status
+                        .form__mesage#form__mesage
+                            .form__mesage__done
+                                img(src="./img/done.png", alt="done")
+                            .form__mesage-header
+                                h3.form__mesage__title Спасибо за заявку!
+                                button.form__mesage__close.pop-up-form__close(href="#")
+                            p.form__mesage__text Наш менеджер свяжется с вами позже
+                            .form__mesage-social
+                                a(href="#")
+                                    img(src="./img/facebook.png", alt="", )
+                                a(href="#")
+                                    img(src="./img/instagram.png", alt="", )
+        include footer.pug
+        script(src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js")
+        script(src="./js/main.js")
